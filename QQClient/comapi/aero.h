@@ -4,7 +4,10 @@
 
 #include <windows.h>
 #include <WinUser.h>
-#pragma comment (lib,"user32.lib")
+
+#ifdef _MSC_VER
+#pragma comment(lib, "user32.lib")
+#endif
 
 typedef enum _WINDOWCOMPOSITIONATTRIB
 {

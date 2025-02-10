@@ -40,8 +40,7 @@ protected:
     void mouseReleaseEvent(QMouseEvent *event);
     void mouseMoveEvent(QMouseEvent *event);
     void mousePressEvent(QMouseEvent *event);
-    bool nativeEvent(const QByteArray &eventType, void *message, long *result);
-
+    bool nativeEvent(const QByteArray &eventType, void *message, qintptr *result) override;
 private:
     bool isLeftPressDown;
     QPoint dragPosition;

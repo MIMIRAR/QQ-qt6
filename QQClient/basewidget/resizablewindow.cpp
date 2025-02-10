@@ -73,7 +73,7 @@ void ResizableWindow::mousePressEvent(QMouseEvent *event)
 
 }
 
-bool ResizableWindow::nativeEvent(const QByteArray &eventType, void *message, long *result)
+bool ResizableWindow::nativeEvent(const QByteArray &eventType, void *message, qintptr *result)
 {
     MSG* msg = (MSG *)message;
     switch (msg->message)

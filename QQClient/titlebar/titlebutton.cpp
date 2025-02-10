@@ -15,7 +15,7 @@ TitleButton::~TitleButton()
 
 }
 
-void TitleButton::enterEvent(QEvent *)
+void TitleButton::enterEvent(QEnterEvent *)
 {
     if(tag == 0){
         setFlat(false);

@@ -11,7 +11,7 @@ class TitleButton : public QPushButton
 public:
     TitleButton(QWidget *parent = nullptr,int tag = 0,QString iconName = "");
     ~TitleButton();
-    void enterEvent(QEvent*);
+    void enterEvent(QEnterEvent*);
     void leaveEvent(QEvent*);
 
 private:

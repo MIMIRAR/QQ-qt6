@@ -283,7 +283,7 @@ ChangePasswordWnd::ChangePasswordWnd(QWidget *parent)
     pEffect->setOffset(0, 0);
     pEffect->setColor(QColor(QStringLiteral("black")));
     pEffect->setBlurRadius(30);
-    mainWnd->setGraphicsEffect(pEffect);
+    //mainWnd->setGraphicsEffect(pEffect);
 
     connect(mainWnd,SIGNAL(closeWindow()),this,SLOT(sltCloseWnd()));
     connect(mainWnd,SIGNAL(signalChangePwd(const QJsonValue &)),

@@ -112,8 +112,8 @@ void RotatingStackedWidget::onRotateFinished()
 void RotatingStackedWidget::paintEvent(QPaintEvent *event)
 {
     if (m_isRoratingWindow){
-        loginWnd->setGraphicsEffect(nullptr);
-        netWorkSetWnd->setGraphicsEffect(nullptr);
+        //loginWnd->setGraphicsEffect(nullptr);
+        //netWorkSetWnd->setGraphicsEffect(nullptr);
 
         int rotateValue = this->property("rotateValue").toInt();
         if (rotateValue <= 90)// 小于90度时;
@@ -145,13 +145,13 @@ void RotatingStackedWidget::paintEvent(QPaintEvent *event)
             pEffect->setOffset(0, 0);
             pEffect->setColor(QColor(QStringLiteral("black")));
             pEffect->setBlurRadius(30);
-            loginWnd->setGraphicsEffect(pEffect);
+            //loginWnd->setGraphicsEffect(pEffect);
         }else {
             QGraphicsDropShadowEffect *pEffect = new QGraphicsDropShadowEffect(netWorkSetWnd);
             pEffect->setOffset(0, 0);
             pEffect->setColor(QColor(QStringLiteral("black")));
             pEffect->setBlurRadius(30);
-            netWorkSetWnd->setGraphicsEffect(pEffect);
+            //netWorkSetWnd->setGraphicsEffect(pEffect);
         }
 
         return QWidget::paintEvent(event);

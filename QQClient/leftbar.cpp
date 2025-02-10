@@ -10,7 +10,9 @@
 #include <QFileInfo>
 
 #ifdef Q_OS_WIN
+#ifdef _MSC_VER
 #pragma comment(lib, "user32.lib")
+#endif
 #include <qt_windows.h>
 #endif
 
@@ -103,7 +105,7 @@ void LeftBar::mousePressEvent(QMouseEvent *event)
 #ifdef Q_OS_WIN
     if (ReleaseCapture()){
         QWidget *pWindow = this->window();
-        if (pWindow->isTopLevel()){
+        if (pWindow->isWindow()){
             SendMessage(HWND(pWindow->winId()), WM_SYSCOMMAND, SC_MOVE + HTCAPTION, 0);
         }
     }

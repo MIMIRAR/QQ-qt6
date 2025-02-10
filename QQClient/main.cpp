@@ -7,11 +7,12 @@
 #include <QTextCodec>
 #include <QFile>
 
+
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    //a.setQuitOnLastWindowClosed(false);
-
+    //a.setQuitOnLastWindowClosed(false);   
     QTextCodec::setCodecForLocale(QTextCodec::codecForName("UTF8"));
 
     MyApp::initApp(a.applicationDirPath());

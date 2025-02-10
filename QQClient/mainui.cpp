@@ -9,7 +9,9 @@
 #include <QDebug>
 #include <QFileInfo>
 
+#ifdef _MSC_VER
 #pragma comment(lib, "user32.lib")
+#endif
 
 #ifdef Q_OS_WIN
 #include <qt_windows.h>

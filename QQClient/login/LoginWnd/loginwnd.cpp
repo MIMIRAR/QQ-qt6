@@ -16,7 +16,7 @@
 
 LoginWnd::LoginWnd(QWidget *parent): QStackedWidget(parent)
 {
-    this->setFixedSize(430,330);
+    this->setFixedSize(430,530);
     this->setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
     setContentsMargins(0,0,0,0);
 

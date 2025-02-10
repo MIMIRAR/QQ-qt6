@@ -511,7 +511,7 @@ void ClientFileSocket::sltReadyRead()
     in.setVersion(QDataStream::Qt_5_11);
 
     // 如果接收到的数据小于等于32个字节，那么是刚开始接收数据，我们保存为头文件信息
-    if (bytesReceived <= (sizeof(qint64)*5))
+    if (bytesReceived <= (sizeof(quint64)*5))
     {
         int nlen = sizeof(qint64) * 5;
         // 接收数据总大小信息和文件名大小信息
